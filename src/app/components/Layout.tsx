@@ -41,7 +41,7 @@ export function Layout() {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="hidden md:block bg-brand text-white px-6 py-3 rounded-lg hover:bg-brand-hover transition"
+              className="hidden md:block ml-4 bg-brand text-white px-6 py-3 rounded-lg hover:bg-brand-hover transition"
             >
               Επικοινωνία
             </Link>

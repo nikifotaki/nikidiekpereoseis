@@ -18,7 +18,7 @@ export function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="font-bold text-white mb-6 break-words text-[clamp(2rem,5vw,3.75rem)]">
               Διεκπεραιώσεις Οχημάτων με Ασφάλεια
             </h1>
             <p className="text-xl text-gray-200 mb-8">
