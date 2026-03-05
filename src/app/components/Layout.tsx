@@ -177,21 +177,48 @@ export function Layout() {
             <div>
               <h3 className="font-bold mb-4">Επικοινωνήστε Μαζί Μας</h3>
               <ul className="space-y-3">
+                {/* Phone numbers */}
                 <li className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">2104901994 - 6945262001</span>
+                  <a
+                    href="tel:+302104901994"
+                    className="text-gray-400 hover:text-brand transition"
+                  >
+                    210 4901994
+                  </a>
+                  <span>-</span>
+                  <a
+                    href="tel:+306945262001"
+                    className="text-gray-400 hover:text-brand transition"
+                  >
+                    694 5262001
+                  </a>
                 </li>
+
+                {/* Email */}
                 <li className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">fotaki71@gmail.com</span>
+                  <a
+                    href="mailto:fotaki71@gmail.com"
+                    className="text-gray-400 hover:text-brand transition"
+                  >
+                    fotaki71@gmail.com
+                  </a>
                 </li>
+
+                {/* Address → Google Maps */}
                 <li className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Θηβών+145+Πειραιάς+18542"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-brand transition"
+                  >
                     Θηβών 145<br />
                     TK 18542 Πειραιάς<br />
                     Ελλάδα
-                  </span>
+                  </a>
                 </li>
               </ul>
             </div>
