@@ -20,7 +20,7 @@ export function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">Επικοινωνήστε Μαζί μας</h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Επικοινωνήστε μαζί μας για να κλείσετε τα μαθήματά σας ή να κάνετε οποιεσδήποτε ερωτήσεις
+            Είμαστε εδώ για να σας εξυπηρετήσουμε με κάθε διεκπεραίωση που χρειάζεστε
           </p>
         </div>
       </section>
@@ -71,19 +71,23 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="course">Ενδιαφέρομαι για</Label>
+                  <Label htmlFor="service">Υπηρεσία που σας Ενδιαφέρει</Label>
                   <Select>
-                    <SelectTrigger id="course">
-                      <SelectValue placeholder="Επιλέξτε μάθημα" />
+                    <SelectTrigger id="service">
+                      <SelectValue placeholder="Επιλέξτε υπηρεσία" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="beginner">Πακέτο Αρχαρίων</SelectItem>
-                      <SelectItem value="standard">Βασικό Πακέτο</SelectItem>
-                      <SelectItem value="premium">Πακέτο Premium</SelectItem>
-                      <SelectItem value="individual">Μεμονωμένα Μαθήματα</SelectItem>
-                      <SelectItem value="road-test">Πακέτο Εξετάσεων</SelectItem>
-                      <SelectItem value="refresher">Μάθημα Ανανέωσης</SelectItem>
-                      <SelectItem value="senior">Μάθημα για Ηλικιωμένους</SelectItem>
+                      <SelectItem value="renewal">Ανανέωση Διπλώματος</SelectItem>
+                      <SelectItem value="extension">Επεκτάσεις - Π.Ε.Ι. - Ε.Α.Τ.</SelectItem>
+                      <SelectItem value="tachograph">Ψηφιακοί Ταχογράφοι - Κ.Τ.Ε.Ο.</SelectItem>
+                      <SelectItem value="transfer">Μεταβίβαση Οχήματος</SelectItem>
+                      <SelectItem value="transport">Άδεια Οδικού Μεταφορέα</SelectItem>
+                      <SelectItem value="adr">Επικίνδυνα Φορτία (A.D.R.)</SelectItem>
+                      <SelectItem value="lost">Απώλεια/Φθορά Διπλώματος</SelectItem>
+                      <SelectItem value="eok">Μετατροπή σε Ε.Ο.Κ.</SelectItem>
+                      <SelectItem value="customs">Εκτελωνισμός</SelectItem>
+                      <SelectItem value="plates">Πινακίδες Ανάριθμων</SelectItem>
+                      <SelectItem value="other">Άλλο</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -93,7 +97,7 @@ export function Contact() {
                   <Textarea
                     id="message"
                     rows={5}
-                    placeholder="Πείτε μας για τις ανάγκες σας και το προτιμώμενο πρόγραμμά σας..."
+                    placeholder="Περιγράψτε τι χρειάζεστε..."
                   />
                 </div>
 
@@ -106,10 +110,10 @@ export function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Επικοινωνία</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Στοιχεία Επικοινωνίας</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Θα χαρούμε να ακούσουμε από εσάς! Επικοινωνήστε μαζί μας μέσω οποιασδήποτε από τις παρακάτω μεθόδους, 
-                και θα σας απαντήσουμε το συντομότερο δυνατόν.
+                Επικοινωνήστε μαζί μας με οποιονδήποτε τρόπο σας εξυπηρετεί καλύτερα. 
+                Είμαστε πάντα στη διάθεσή σας για να απαντήσουμε σε κάθε σας ερώτηση.
               </p>
 
               <div className="space-y-6 mb-8">
@@ -118,9 +122,10 @@ export function Contact() {
                     <Phone className="w-6 h-6 text-brand" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Τηλέφωνο</h3>
-                    <p className="text-gray-600">210 123 4567</p>
-                    <p className="text-sm text-gray-500">Δευ-Παρ: 8πμ-8μμ, Σαβ-Κυρ: 9πμ-5μμ</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Τηλέφωνα</h3>
+                    <p className="text-gray-600">2104901994</p>
+                    <p className="text-gray-600">6945262001</p>
+                    <p className="text-sm text-gray-500 mt-1">Δευ-Παρ: 8:00-17:00</p>
                   </div>
                 </div>
 
@@ -130,7 +135,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@sostaodigο.gr</p>
+                    <p className="text-gray-600">fotaki71@gmail.com</p>
                     <p className="text-sm text-gray-500">Απαντάμε εντός 24 ωρών</p>
                   </div>
                 </div>
@@ -140,9 +145,9 @@ export function Contact() {
                     <MapPin className="w-6 h-6 text-brand" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-1">Γραφεία</h3>
-                    <p className="text-gray-600">Λεωφόρος Αθηνών 123</p>
-                    <p className="text-gray-600">Αθήνα, 104 42</p>
+                    <h3 className="font-bold text-gray-900 mb-1">Διεύθυνση Γραφείου</h3>
+                    <p className="text-gray-600">Θηβών 145</p>
+                    <p className="text-gray-600">Πειραιάς</p>
                   </div>
                 </div>
 
@@ -152,9 +157,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Ώρες Λειτουργίας</h3>
-                    <p className="text-gray-600">Δευτέρα - Παρασκευή: 8:00 πμ - 8:00 μμ</p>
-                    <p className="text-gray-600">Σάββατο: 9:00 πμ - 5:00 μμ</p>
-                    <p className="text-gray-600">Κυριακή: 9:00 πμ - 5:00 μμ</p>
+                    <p className="text-gray-600">Δευτέρα - Παρασκευή: 8:00 - 17:00</p>
+                    <p className="text-gray-600">Σάββατο - Κυριακή: Κλειστά</p>
                   </div>
                 </div>
               </div>
@@ -179,50 +183,51 @@ export function Contact() {
           <div className="max-w-3xl mx-auto space-y-6">
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-bold text-lg mb-2">Πώς κλείνω το πρώτο μου μάθημα;</h3>
+                <h3 className="font-bold text-lg mb-2">Τι έγγραφα χρειάζομαι για ανανέωση διπλώματος;</h3>
                 <p className="text-gray-600">
-                  Απλά συμπληρώστε τη φόρμα επικοινωνίας παραπάνω ή τηλεφωνήστε μας. Θα συζητήσουμε τις ανάγκες σας και 
-                  θα προγραμματίσουμε μια βολική ώρα για το πρώτο σας μάθημα.
+                  Θα χρειαστείτε την αστυνομική σας ταυτότητα, το παλιό σας δίπλωμα, δύο φωτογραφίες και 
+                  ιατρική βεβαίωση. Εμείς αναλαμβάνουμε όλη τη διαδικασία για εσάς.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-bold text-lg mb-2">Τι πρέπει να φέρω στο πρώτο μου μάθημα;</h3>
+                <h3 className="font-bold text-lg mb-2">Πόσο χρόνο χρειάζεται μια μεταβίβαση;</h3>
                 <p className="text-gray-600">
-                  Φέρτε την άδεια μαθητευόμενου οδηγού ή την άδεια οδήγησής σας, άνετα παπούτσια και θετική διάθεση! 
-                  Εμείς παρέχουμε όλο το απαραίτητο εκπαιδευτικό υλικό.
+                  Μια τυπική μεταβίβαση ολοκληρώνεται σε 3-5 εργάσιμες ημέρες. Σε επείγουσες περιπτώσεις 
+                  μπορούμε να επιταχύνουμε τη διαδικασία.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-bold text-lg mb-2">Μπορώ να επιλέξω τον εκπαιδευτή μου;</h3>
+                <h3 className="font-bold text-lg mb-2">Προσφέρετε υπηρεσίες για επαγγελματικά οχήματα;</h3>
                 <p className="text-gray-600">
-                  Ναι! Ενώ θα κάνουμε την καλύτερη επιλογή για τις ανάγκες σας, μπορείτε να ζητήσετε συγκεκριμένο 
-                  εκπαιδευτή βάσει διαθεσιμότητας.
+                  Ναι, εξειδικευόμαστε σε όλες τις διαδικασίες για επαγγελματικά οχήματα, φορτηγά, 
+                  ταξί και λεωφορεία. Αναλαμβάνουμε άδειες μεταφορέα, Π.Ε.Ι., και όλες τις σχετικές διαδικασίες.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-bold text-lg mb-2">Προσφέρετε σχέδια πληρωμής;</h3>
+                <h3 className="font-bold text-lg mb-2">Τι γίνεται αν έχασα το δίπλωμά μου;</h3>
                 <p className="text-gray-600">
-                  Ναι, προσφέρουμε ευέλικτα σχέδια πληρωμής για όλα τα πακέτα μας. Συζητήστε τις επιλογές μαζί μας όταν 
-                  κλείσετε τα μαθήματά σας.
+                  Μην ανησυχείτε! Αναλαμβάνουμε άμεσα την έκδοση αντιγράφου. Η διαδικασία είναι γρήγορη 
+                  και θα έχετε το νέο σας δίπλωμα σε λίγες ημέρες.
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-6">
-                <h3 className="font-bold text-lg mb-2">Ποια είναι η πολιτική ακύρωσης;</h3>
+                <h3 className="font-bold text-lg mb-2">Πρέπει να έρθω στο γραφείο προσωπικά;</h3>
                 <p className="text-gray-600">
-                  Απαιτούμε ειδοποίηση 24 ωρών για ακυρώσεις. Μαθήματα που ακυρώνονται με μικρότερη προειδοποίηση μπορεί να 
-                  χρεωθούν το 50% της αξίας του μαθήματος.
+                  Για ορισμένες υπηρεσίες μπορεί να χρειαστεί μια σύντομη επίσκεψη για υπογραφές. 
+                  Ωστόσο, μπορούμε να διεκπεραιώσουμε πολλές υποθέσεις και εξ αποστάσεως. 
+                  Επικοινωνήστε μαζί μας για να δούμε τις επιλογές.
                 </p>
               </CardContent>
             </Card>

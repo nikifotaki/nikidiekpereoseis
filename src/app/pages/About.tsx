@@ -1,4 +1,4 @@
-import { Award, Users, Car, TrendingUp, Shield, Heart } from "lucide-react";
+import { Award, Users, Car, TrendingUp, Shield, Heart, FileText, Clock } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 
 export function About() {
@@ -7,9 +7,9 @@ export function About() {
       {/* Hero Section */}
       <section className="py-20" style={{ background: `linear-gradient(to right, var(--brand-primary-gradient-from), var(--brand-primary-gradient-to))` }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Σχετικά με τη ΣωστάΟδηγώ</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Σχετικά με το Γραφείο μας</h1>
           <p className="text-xl text-white/80 max-w-3xl mx-auto">
-            Παρέχουμε ποιοτική εκπαίδευση οδηγών και δημιουργούμε σίγουρους, ασφαλείς οδηγούς από το 2011
+            Παρέχουμε ποιοτικές υπηρεσίες διεκπεραίωσης οχημάτων, με πολυετή εμπειρία στον χώρο.
           </p>
         </div>
       </section>
@@ -21,22 +21,24 @@ export function About() {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Η Αποστολή μας</h2>
               <p className="text-lg text-gray-600 mb-4">
-                Στη Σχολή Οδηγών ΣωστάΟδηγώ, η αποστολή μας είναι να παρέχουμε ολοκληρωμένη, υψηλής ποιότητας 
-                εκπαίδευση οδηγών που δίνει τη δυνατότητα στους μαθητές να γίνουν ασφαλείς, σίγουροι και υπεύθυνοι οδηγοί.
+                Στο Γραφείο Διεκπεραιώσεων Νίκη Φωτάκη, η αποστολή μας είναι να παρέχουμε ολοκληρωμένες, 
+                υψηλής ποιότητας υπηρεσίες που καλύπτουν κάθε ανάγκη που σχετίζεται με τη διοικητική 
+                διαχείριση των οχημάτων σας.
               </p>
               <p className="text-lg text-gray-600 mb-4">
-                Πιστεύουμε ότι η εκμάθηση οδήγησης είναι κάτι περισσότερο από το να περάσεις μια εξέταση – πρόκειται για την 
-                ανάπτυξη δεξιοτήτων και συνηθειών που θα σε κρατήσουν εσένα και τους άλλους ασφαλείς στο δρόμο.
+                Πιστεύουμε ότι η εξυπηρέτηση των πελατών μας είναι κάτι περισσότερο από την απλή 
+                διεκπεραίωση εγγράφων – πρόκειται για τη δημιουργία σχέσεων εμπιστοσύνης και την 
+                παροχή λύσεων που διευκολύνουν την καθημερινότητά τους.
               </p>
               <p className="text-lg text-gray-600">
-                Με πάνω από 15 χρόνια εμπειρίας, έχουμε βοηθήσει χιλιάδες μαθητές να επιτύχουν τους στόχους οδήγησής τους, 
-                και είμαστε αφοσιωμένοι να συνεχίσουμε αυτή την παράδοση αριστείας.
+                Με πολυετή εμπειρία, έχουμε εξυπηρετήσει χιλιάδες πελάτες, και είμαστε αφοσιωμένοι 
+                να συνεχίσουμε αυτή την παράδοση αριστείας και επαγγελματισμού.
               </p>
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1764547169175-9b7d2736324e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkcml2aW5nJTIwaW5zdHJ1Y3RvcnxlbnwxfHx8fDE3NzIwNDE0MzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Επαγγελματίας Εκπαιδευτής"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjB3b3JrfGVufDF8fHx8MTc0MTQ1NDgwMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Επαγγελματικό Περιβάλλον"
                 className="rounded-lg shadow-xl"
               />
             </div>
@@ -49,20 +51,20 @@ export function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-5xl font-bold text-brand mb-2">15+</div>
-              <div className="text-gray-600">Χρόνια Εμπειρίας</div>
+              <div className="text-3xl font-bold text-brand mb-2">Πολυετής</div>
+              <div className="text-gray-600">Εμπειρία</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-brand mb-2">10.000+</div>
-              <div className="text-gray-600">Εκπαιδευμένοι Μαθητές</div>
+              <div className="text-3xl font-bold text-brand mb-2">Εκατοντάδες</div>
+              <div className="text-gray-600">Ικανοποιημένοι Πελάτες</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-brand mb-2">95%</div>
-              <div className="text-gray-600">Επιτυχία Πρώτης Φοράς</div>
+              <div className="text-3xl font-bold text-brand mb-2">Απόλυτος</div>
+              <div className="text-gray-600">Επαγγελματισμός</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-brand mb-2">20+</div>
-              <div className="text-gray-600">Έμπειροι Εκπαιδευτές</div>
+              <div className="text-3xl font-bold text-brand mb-2">Άμεση</div>
+              <div className="text-gray-600">Εξυπηρέτηση</div>
             </div>
           </div>
         </div>
@@ -81,10 +83,10 @@ export function About() {
               <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Ασφάλεια Πρώτα</h3>
+              <h3 className="text-xl font-bold mb-3">Αξιοπιστία</h3>
               <p className="text-gray-600">
-                Δίνουμε προτεραιότητα στην ασφάλεια σε κάθε πτυχή της εκπαίδευσής μας, διασφαλίζοντας ότι οι μαθητές 
-                μαθαίνουν αμυντικές τεχνικές οδήγησης και αναπτύσσουν ασφαλείς συνήθειες.
+                Διαχειριζόμαστε τα έγγραφά σας με απόλυτη ασφάλεια και εμπιστευτικότητα, 
+                διασφαλίζοντας την ομαλή διεκπεραίωση κάθε υπόθεσης.
               </p>
             </div>
 
@@ -92,10 +94,10 @@ export function About() {
               <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Υπομονή & Υποστήριξη</h3>
+              <h3 className="text-xl font-bold mb-3">Εξατομικευμένη Εξυπηρέτηση</h3>
               <p className="text-gray-600">
-                Καταλαβαίνουμε ότι κάθε μαθητής μαθαίνει με τον δικό του ρυθμό. Οι εκπαιδευτές μας παρέχουν υπομονετική, 
-                ενθαρρυντική καθοδήγηση καθ' όλη τη διάρκεια της μαθησιακής διαδικασίας.
+                Κάθε πελάτης είναι μοναδικός για εμάς. Προσφέρουμε εξατομικευμένες λύσεις 
+                που ανταποκρίνονται στις συγκεκριμένες ανάγκες σας.
               </p>
             </div>
 
@@ -103,93 +105,114 @@ export function About() {
               <div className="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-brand" />
               </div>
-              <h3 className="text-xl font-bold mb-3">Αριστεία</h3>
+              <h3 className="text-xl font-bold mb-3">Επαγγελματισμός</h3>
               <p className="text-gray-600">
-                Είμαστε αφοσιωμένοι στη διατήρηση των υψηλότερων προτύπων στην εκπαίδευση οδηγών και στη συνεχή 
-                βελτίωση των υπηρεσιών μας.
+                Είμαστε αφοσιωμένοι στη διατήρηση των υψηλότερων προτύπων στις υπηρεσίες μας 
+                και στη συνεχή βελτίωση της εξυπηρέτησής μας.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Instructors Section */}
+      {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Η Ομάδα των Ειδικών μας</h2>
-            <p className="text-xl text-gray-600">Γνωρίστε τους πιστοποιημένους εκπαιδευτές οδήγησής μας</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Το Εύρος των Υπηρεσιών μας</h2>
+            <p className="text-xl text-gray-600">Καλύπτουμε κάθε σας ανάγκη</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardContent className="pt-8">
-                <div className="h-64 bg-gray-300 flex items-center justify-center mb-6 rounded-lg">
-                  <Users className="w-24 h-24 text-gray-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-6 h-6 text-brand" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Διπλώματα Οδήγησης</h3>
+                    <p className="text-gray-600">
+                      Ανανεώσεις, απώλειες, φθορές και όλες οι σχετικές διαδικασίες για τα διπλώματά σας.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Μιχάλης Ιωάννου</h3>
-                <p className="text-brand mb-4">Αρχικός Εκπαιδευτής</p>
-                <p className="text-gray-600">
-                  15+ χρόνια εμπειρίας. Ειδικεύεται σε νευρικούς αρχάριους και αμυντική οδήγηση.
-                </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-8">
-                <div className="h-64 bg-gray-300 flex items-center justify-center mb-6 rounded-lg">
-                  <Users className="w-24 h-24 text-gray-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Car className="w-6 h-6 text-brand" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Μεταβιβάσεις Οχημάτων</h3>
+                    <p className="text-gray-600">
+                      Πλήρης διαχείριση μεταβιβάσεων Ι.Χ.Ε. και Φ.Ι.Χ. με ταχύτητα και ασφάλεια.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Ελένη Δημητρίου</h3>
-                <p className="text-brand mb-4">Ανώτερη Εκπαιδεύτρια</p>
-                <p className="text-gray-600">
-                  12+ χρόνια εμπειρίας. Ειδική στην εκπαίδευση εφήβων οδηγών και προετοιμασία για εξετάσεις.
-                </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardContent className="pt-8">
-                <div className="h-64 bg-gray-300 flex items-center justify-center mb-6 rounded-lg">
-                  <Users className="w-24 h-24 text-gray-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-brand" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Επαγγελματικές Άδειες</h3>
+                    <p className="text-gray-600">
+                      Άδειες οδικού μεταφορέα, επικίνδυνα φορτία (A.D.R.) και Π.Ε.Ι.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Δημήτρης Παπαδόπουλος</h3>
-                <p className="text-brand mb-4">Ανώτερος Εκπαιδευτής</p>
-                <p className="text-gray-600">
-                  10+ χρόνια εμπειρίας. Ειδικεύεται σε οδήγηση αυτοκινητόδρομου και προηγμένες τεχνικές.
-                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-brand-light rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-6 h-6 text-brand" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Εκτελωνισμοί</h3>
+                    <p className="text-gray-600">
+                      Εκτελωνισμοί Ι.Χ.Ε. και τρέιλερ, μετατροπές σε Ε.Ο.Κ. και πινακίδες.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Fleet Section */}
+      {/* Location Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Σύγχρονα, Ασφαλή Οχήματα</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Βρείτε μας</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Ο στόλος μας αποτελείται από σύγχρονα οχήματα εξοπλισμένα με τα πιο πρόσφατα χαρακτηριστικά ασφαλείας και 
-                διπλά χειριστήρια για μέγιστη ασφάλεια κατά τη διάρκεια της εκπαίδευσης.
+                Το γραφείο μας βρίσκεται σε κεντρικό σημείο του Πειραιά, εύκολα προσβάσιμο 
+                για την εξυπηρέτησή σας. Επισκεφθείτε μας για άμεση εξυπηρέτηση.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
                   <Car className="w-6 h-6 text-brand" />
-                  <span className="text-gray-700">Διπλά χειριστήρια φρένου και επιταχυντή</span>
+                  <span className="text-gray-700">Εύκολη πρόσβαση με αυτοκίνητο</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <Car className="w-6 h-6 text-brand" />
-                  <span className="text-gray-700">Προηγμένα χαρακτηριστικά ασφαλείας (ABS, αερόσακοι κ.λπ.)</span>
+                  <span className="text-gray-700">Κεντρική τοποθεσία</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <Car className="w-6 h-6 text-brand" />
-                  <span className="text-gray-700">Τακτική συντήρηση και επιθεωρήσεις</span>
-                </li>
-                <li className="flex items-center space-x-3">
-                  <Car className="w-6 h-6 text-brand" />
-                  <span className="text-gray-700">Καθαρά, άνετα εσωτερικά</span>
+                  <span className="text-gray-700">Άνετος χώρος αναμονής</span>
                 </li>
               </ul>
             </div>

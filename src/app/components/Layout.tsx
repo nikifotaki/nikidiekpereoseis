@@ -14,10 +14,10 @@ export function Layout() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-12 h-12 bg-brand rounded-full flex items-center justify-center">
-                <span className="text-white text-xl font-bold">ΣΟ</span>
+                <span className="text-white text-xl font-bold">ΓΔ</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">Διεκπεραιώσεις Νίκη</h1>
+                <h1 className="text-2xl font-bold text-gray-900">Νίκη Φωτάκη</h1>
                 <p className="text-xs text-gray-600">Γραφείο Διεκπεραιώσεων</p>
               </div>
             </Link>
@@ -43,7 +43,7 @@ export function Layout() {
               to="/contact"
               className="hidden md:block bg-brand text-white px-6 py-3 rounded-lg hover:bg-brand-hover transition"
             >
-              Επικοινωνήστε Μαζί μας
+              Επικοινωνία
             </Link>
 
             {/* Mobile Menu Button */}
@@ -78,7 +78,7 @@ export function Layout() {
                   className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-brand transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Σχετικά με Εμάς
+                  Σχετικά mε Εμάς
                 </Link>
                 <Link 
                   to="/courses" 
@@ -100,7 +100,7 @@ export function Layout() {
                     className="block w-full bg-brand text-white px-6 py-3 rounded-lg hover:bg-brand-hover transition text-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Επικοινωνήστε Μαζί μας
+                    Επικοινωνία
                   </Link>
                 </div>
               </nav>
@@ -122,16 +122,16 @@ export function Layout() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-10 h-10 bg-brand rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">ΣΟ</span>
+                  <span className="text-white font-bold">ΓΔ</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">ΣωστάΟδηγώ</h3>
-                  <p className="text-xs text-gray-400">Σχολή Οδηγών</p>
+                  <h3 className="text-xl font-bold">Νίκη Φωτάκη</h3>
+                  <p className="text-xs text-gray-400">Γραφείο Διεκπεραιώσεων</p>
                 </div>
               </div>
               <p className="text-gray-400 mb-4">
-                Ο αξιόπιστος συνεργάτης σας στην εκμάθηση ασφαλούς και σίγουρης οδήγησης. 
-                Πάνω από 15 χρόνια εμπειρίας στην εκπαίδευση οδηγών.
+                Ο αξιόπιστος συνεργάτης σας για όλες τις διεκπεραιώσεις οχημάτων. 
+                Πολυετής εμπειρία και επαγγελματική εξυπηρέτηση.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition">
@@ -162,7 +162,7 @@ export function Layout() {
                 </li>
                 <li>
                   <Link to="/courses" className="text-gray-400 hover:text-white transition">
-                    Μαθήματα
+                    Υπηρεσίες
                   </Link>
                 </li>
                 <li>
@@ -179,22 +179,22 @@ export function Layout() {
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
                   <Phone className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">210 123 4567</span>
+                  <span className="text-gray-400">2104901994 - 6945262001</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <Mail className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">info@sostaodigο.gr</span>
+                  <span className="text-gray-400">fotaki71@gmail.com</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-brand mt-0.5" />
-                  <span className="text-gray-400">Λεωφόρος Αθηνών 123<br />Αθήνα, 104 42</span>
+                  <span className="text-gray-400">Θηβών 145<br />Πειραιάς</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 Σχολή Οδηγών ΣωστάΟδηγώ. Όλα τα δικαιώματα διατηρούνται.</p>
+            <p>&copy; 2026 Γραφείο Διεκπεραιώσεων Νίκη Φωτάκη. All rights reserved.</p>
           </div>
         </div>
       </footer>
