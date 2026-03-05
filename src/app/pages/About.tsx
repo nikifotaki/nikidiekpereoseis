@@ -49,22 +49,33 @@ export function About() {
       {/* Stats Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-brand mb-2">Πολυετής</div>
-              <div className="text-gray-600">Εμπειρία</div>
+              <div className="text-[clamp(1.5rem,5vw,2.5rem)] font-bold text-brand mb-2 break-words">
+                Πολυετής
+              </div>
+              <div className="text-gray-600 break-words">Εμπειρία</div>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-brand mb-2">Εκατοντάδες</div>
-              <div className="text-gray-600">Ικανοποιημένοι Πελάτες</div>
+              <div className="text-[clamp(1.5rem,5vw,2.5rem)] font-bold text-brand mb-2 break-words">
+                Εκατοντάδες
+              </div>
+              <div className="text-gray-600 break-words">Ικανοποιημένοι Πελάτες</div>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-brand mb-2">Απόλυτος</div>
-              <div className="text-gray-600">Επαγγελματισμός</div>
+              <div className="text-[clamp(1.5rem,5vw,2.5rem)] font-bold text-brand mb-2 break-words">
+                Απόλυτος
+              </div>
+              <div className="text-gray-600 break-words">Επαγγελματισμός</div>
             </div>
+
             <div>
-              <div className="text-3xl font-bold text-brand mb-2">Άμεση</div>
-              <div className="text-gray-600">Εξυπηρέτηση</div>
+              <div className="text-[clamp(1.5rem,5vw,2.5rem)] font-bold text-brand mb-2 break-words">
+                Άμεση
+              </div>
+              <div className="text-gray-600 break-words">Εξυπηρέτηση</div>
             </div>
           </div>
         </div>
