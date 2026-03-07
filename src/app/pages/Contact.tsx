@@ -11,8 +11,76 @@ import {
   SelectValue,
 } from "../components/ui/select";
 import { Card, CardContent } from "../components/ui/card";
+import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      service: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // EmailJS configuration - Replace with your actual IDs
+      const serviceId = 'service_237skbg';
+      const templateId = 'template_nencndb';
+      const publicKey = 'PYAXthzFcO3jzqgDT';
+      console.log('Sending email with data:', formData);
+
+      const templateParams = {
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        to_email: 'sgta52015@gmail.com' // Your email address to receive the message
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Email send failed:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
@@ -32,14 +100,18 @@ export function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Στείλτε μας Μήνυμα</h2>
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="firstName">Όνομα</Label>
                     <Input
                       type="text"
                       id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                       placeholder="Γιάννης"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
@@ -47,7 +119,11 @@ export function Contact() {
                     <Input
                       type="text"
                       id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                       placeholder="Παπαδόπουλος"
+                      required
                     />
                   </div>
                 </div>
@@ -57,7 +133,11 @@ export function Contact() {
                   <Input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="giannis.papadopoulos@example.com"
+                    required
                   />
                 </div>
 
@@ -66,13 +146,17 @@ export function Contact() {
                   <Input
                     type="tel"
                     id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     placeholder="210 123 4567"
+                    required
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="service">Υπηρεσία που σας Ενδιαφέρει</Label>
-                  <Select>
+                  <Select value={formData.service} onValueChange={handleSelectChange}>
                     <SelectTrigger id="service">
                       <SelectValue placeholder="Επιλέξτε υπηρεσία" />
                     </SelectTrigger>
@@ -96,14 +180,30 @@ export function Contact() {
                   <Label htmlFor="message">Μήνυμα</Label>
                   <Textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     rows={5}
                     placeholder="Περιγράψτε τι χρειάζεστε..."
+                    required
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-brand hover:bg-brand-hover">
-                  <Send className="w-5 h-5" />
-                  Αποστολή Μηνύματος
+                {submitStatus === 'success' && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-md">
+                    <p className="text-green-800">Το μήνυμά σας στάλθηκε επιτυχώς! Θα επικοινωνήσουμε μαζί σας σύντομα.</p>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-md">
+                    <p className="text-red-800">Υπήρξε πρόβλημα με την αποστολή του μηνύματος. Παρακαλώ δοκιμάστε ξανά ή επικοινωνήστε μαζί μας τηλεφωνικά.</p>
+                  </div>
+                )}
+
+                <Button type="submit" className="w-full bg-brand hover:bg-brand-hover" disabled={isSubmitting}>
+                  {isSubmitting ? 'Αποστολή...' : 'Αποστολή Μηνύματος'}
+                  <Send className="w-5 h-5 ml-2" />
                 </Button>
               </form>
             </div>
@@ -123,9 +223,20 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Τηλέφωνα</h3>
-                    <p className="text-gray-600">2104901994</p>
-                    <p className="text-gray-600">6945262001</p>
-                    <p className="text-sm text-gray-500 mt-1">Δευ-Παρ: 8:00-17:00</p>
+                    <a
+                    href="tel:+302104901994"
+                    className="text-gray-600 hover:text-brand transition"
+                  >
+                    210 4901994
+                  </a>
+                  <br />
+                                      <a
+                    href="tel:+306945262001"
+                    className="text-gray-600 hover:text-brand transition"
+                  >
+                    694 5262001
+                  </a>
+                    {/* <p className="text-sm text-gray-500 mt-1">Δευ-Παρ: 8:00-17:00</p> */}
                   </div>
                 </div>
 
@@ -135,7 +246,12 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">fotaki71@gmail.com</p>
+                    <a
+                    href="mailto:fotaki71@gmail.com"
+                    className="text-gray-600 hover:text-brand transition"
+                  >
+                    fotaki71@gmail.com
+                  </a>
                     <p className="text-sm text-gray-500">Απαντάμε εντός 24 ωρών</p>
                   </div>
                 </div>
@@ -146,8 +262,16 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Διεύθυνση Γραφείου</h3>
-                    <p className="text-gray-600">Θηβών 145</p>
-                    <p className="text-gray-600">Πειραιάς</p>
+                                      <a
+                    href="https://www.google.com/maps/search/?api=1&query=Θηβών+145+Πειραιάς+18542"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-brand transition"
+                  >
+                    Θηβών 145<br />
+                    TK 18542 Πειραιάς<br />
+                    Ελλάδα
+                  </a>
                   </div>
                 </div>
 
@@ -157,16 +281,20 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Ώρες Λειτουργίας</h3>
-                    <p className="text-gray-600">Δευτέρα - Παρασκευή: 8:00 - 17:00</p>
+                    <p className="text-gray-600">Δευτέρα & Τετάρτη: 9:00 - 17:00</p>
+                    <p className="text-gray-600">Τρίτη - Πέμπτη - Παρασκευή: 9:00 - 14:00 & 17:00 - 20:00</p>
                     <p className="text-gray-600">Σάββατο - Κυριακή: Κλειστά</p>
                   </div>
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                <MapPin className="w-16 h-16 text-gray-400" />
-              </div>
+              {/* Map Embed */}
+              <iframe
+                className="w-full h-64 rounded-lg"
+                src="https://www.google.com/maps?q=Θηβών+145+18542+Πειραιάς+Ελλάδα&output=embed"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>

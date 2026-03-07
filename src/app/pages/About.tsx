@@ -227,9 +227,14 @@ export function About() {
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-              <Car className="w-32 h-32 text-gray-400" />
-            </div>
+
+              {/* Map Embed */}
+              <iframe
+                className="w-full h-64 rounded-lg"
+                src="https://www.google.com/maps?q=Θηβών+145+18542+Πειραιάς+Ελλάδα&output=embed"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
           </div>
         </div>
       </section>
