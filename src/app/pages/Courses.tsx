@@ -51,7 +51,7 @@ export function Courses() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Ανανεώσεις Διπλωμάτων Ταχυπλού</span>
+                    <span className="text-gray-700">Ανανεώσεις Διπλωμάτων Ταχυπλόου</span>
                   </li>
                 </ul>
                 <Button asChild className="w-full mt-6">
