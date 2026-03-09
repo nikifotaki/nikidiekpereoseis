@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router";
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, X } from "lucide-react";
 import { useState } from "react";
+import logoEmblem from "./logoemblem.png";
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,9 +14,7 @@ export function Layout() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-brand rounded-full flex items-center justify-center">
-                <span className="text-white text-xl font-bold">ΓΔ</span>
-              </div>
+              <img src={logoEmblem} alt="Νίκη Φωτάκη Logo" className="w-12 h-12" />
               <div>
                 <h1 className="text-2xl font-bold text-gray-900">Νίκη Φωτάκη</h1>
                 <p className="text-xs text-gray-600">Γραφείο Διεκπεραιώσεων</p>
@@ -121,9 +120,7 @@ export function Layout() {
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-brand rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">ΓΔ</span>
-                </div>
+                <img src={logoEmblem} alt="Νίκη Φωτάκη Logo" className="w-10 h-10" />
                 <div>
                   <h3 className="text-xl font-bold">Νίκη Φωτάκη</h3>
                   <p className="text-xs text-gray-400">Γραφείο Διεκπεραιώσεων</p>
