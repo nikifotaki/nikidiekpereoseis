@@ -59,7 +59,7 @@ export function Contact() {
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: 'sgta52015@gmail.com' // Your email address to receive the message
+        to_email: 'wakeboards2015@gmail.com' // Your email address to receive the message
       };
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
