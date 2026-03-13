@@ -161,17 +161,17 @@ export function Contact() {
                       <SelectValue placeholder="Επιλέξτε υπηρεσία" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="renewal">Ανανέωση Διπλώματος</SelectItem>
-                      <SelectItem value="extension">Επεκτάσεις - Π.Ε.Ι. - Ε.Α.Τ.</SelectItem>
-                      <SelectItem value="tachograph">Ψηφιακοί Ταχογράφοι - Κ.Τ.Ε.Ο.</SelectItem>
-                      <SelectItem value="transfer">Μεταβίβαση Οχήματος</SelectItem>
-                      <SelectItem value="transport">Άδεια Οδικού Μεταφορέα</SelectItem>
-                      <SelectItem value="adr">Επικίνδυνα Φορτία (A.D.R.)</SelectItem>
-                      <SelectItem value="lost">Απώλεια/Φθορά Διπλώματος</SelectItem>
-                      <SelectItem value="eok">Μετατροπή σε Ε.Ο.Κ.</SelectItem>
-                      <SelectItem value="customs">Εκτελωνισμός</SelectItem>
-                      <SelectItem value="plates">Πινακίδες Ανάριθμων</SelectItem>
-                      <SelectItem value="other">Άλλο</SelectItem>
+                      <SelectItem value="Ανανέωση Διπλώματος">Ανανέωση Διπλώματος</SelectItem>
+                      <SelectItem value="Επεκτάσεις - Π.Ε.Ι. - Ε.Α.Τ.">Επεκτάσεις - Π.Ε.Ι. - Ε.Α.Τ.</SelectItem>
+                      <SelectItem value="Ψηφιακοί Ταχογράφοι - Κ.Τ.Ε.Ο.">Ψηφιακοί Ταχογράφοι - Κ.Τ.Ε.Ο.</SelectItem>
+                      <SelectItem value="Μεταβίβαση Οχήματος">Μεταβίβαση Οχήματος</SelectItem>
+                      <SelectItem value="Άδεια Οδικού Μεταφορέα">Άδεια Οδικού Μεταφορέα</SelectItem>
+                      <SelectItem value="Επικίνδυνα Φορτία (A.D.R.)">Επικίνδυνα Φορτία (A.D.R.)</SelectItem>
+                      <SelectItem value="Απώλεια/Φθορά Διπλώματος">Απώλεια/Φθορά Διπλώματος</SelectItem>
+                      <SelectItem value="Μετατροπή σε Ε.Ο.Κ.">Μετατροπή σε Ε.Ο.Κ.</SelectItem>
+                      <SelectItem value="Εκτελωνισμός">Εκτελωνισμός</SelectItem>
+                      <SelectItem value="Πινακίδες Ανάριθμων">Πινακίδες Ανάριθμων</SelectItem>
+                      <SelectItem value="Άλλο">Άλλο</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
