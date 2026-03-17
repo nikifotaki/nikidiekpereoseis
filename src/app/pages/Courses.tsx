@@ -70,7 +70,7 @@ export function Courses() {
                 <ul className="space-y-3 flex-grow">
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Έκδοση και Ανανέωση Επαγγελαμτικής Ικανότητας Π.Ε.Ι. (Κατηγ. Γ' & Δ')</span>
+                    <span className="text-gray-700">Έκδοση και Ανανέωση Επαγγελματικής Ικανότητας Π.Ε.Ι. (Κατηγ. Γ' & Δ')</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-brand flex-shrink-0 mt-0.5" />
