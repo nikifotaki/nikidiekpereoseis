@@ -263,7 +263,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Διεύθυνση Γραφείου</h3>
                                       <a
-                    href="https://www.google.com/maps/search/?api=1&query=Θηβών+145+Πειραιάς+18542"
+                    href="https://maps.app.goo.gl/LGGh5xV3TztBzt4A7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-brand transition"

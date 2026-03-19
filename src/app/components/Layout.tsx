@@ -207,7 +207,7 @@ export function Layout() {
                 <li className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-brand mt-0.5" />
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=Θηβών+145+Πειραιάς+18542"
+                    href="https://maps.app.goo.gl/LGGh5xV3TztBzt4A7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-brand transition"
