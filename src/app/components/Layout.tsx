@@ -130,7 +130,7 @@ export function Layout() {
                 Ο αξιόπιστος συνεργάτης σας για όλες τις διεκπεραιώσεις οχημάτων. 
                 Πολυετής εμπειρία και επαγγελματική εξυπηρέτηση.
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition">
                   <Facebook className="w-5 h-5" />
                 </a>
@@ -140,7 +140,7 @@ export function Layout() {
                 <a href="#" className="text-gray-400 hover:text-white transition">
                   <Twitter className="w-5 h-5" />
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}
